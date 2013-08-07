@@ -29,6 +29,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+if ('pi' == app.get('env')) {
+  app.set('port', 8080);
+  console.log('using PI environment');
+}
 
 app.get('/', routes.index);
 app.get('/users', user.list);
