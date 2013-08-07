@@ -1,0 +1,11 @@
+extends layout
+
+block headers
+  meta(name='viewport', content='width=device-width, user-scalable=no')
+  script(type='text/javascript', src='/javascripts/utils.js')
+  script(type='text/javascript', src='/javascripts/common.js')
+  script(type='text/javascript', src='/javascripts/noise.js')
+  script(type='text/javascript', src='http://192.168.0.20:4000/socket.io/socket.io.js')
+  script(type='text/javascript', src='/javascripts/app.js')
+block content
+  div#stage
